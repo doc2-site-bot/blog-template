@@ -15,6 +15,9 @@
         "web-homepage web-post-list.top": {
           "slot": "aside"
         },
+        "web-hero img": {
+          "loading": "eager"
+        },
         "web-hero p:has(picture)": {
           "slot": "picture"
         },

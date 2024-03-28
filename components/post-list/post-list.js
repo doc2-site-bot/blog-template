@@ -25,7 +25,7 @@ window.customElements.define('web-post-list', class extends Component {
                     <li class="post">
                        <a href="${path}">
                           <div class="thumbnail">
-                            <img loading="lazy" alt="${title}" src="${thumbnail.replace('default.webp', '300.webp')}" />
+                            <img loading="lazy" alt="" src="${thumbnail.replace('default.webp', '300.webp')}" />
                           </div>
                           <div class="text">
                             <h3>${title}</h3> 
@@ -45,7 +45,7 @@ window.customElements.define('web-post-list', class extends Component {
                             ${keywords ? `<ul class="tags">${keywords.split(',').map(keyword => `<li>${keyword.trim()}</li>`).join('')}</ul>` : ''} 
                           </div>
                           <div class="thumbnail">
-                            <img loading="lazy" alt="${title}" src="${thumbnail.replace('default.webp', '600.webp')}" />
+                            <img loading="lazy" alt="" src="${thumbnail.replace('default.webp', '600.webp')}" />
                           </div> 
                        </a> 
                     </li>

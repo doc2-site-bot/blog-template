@@ -26,7 +26,7 @@ window.customElements.define('web-header-nav', class extends Component {
                         <li class="post">
                             <a href="${path}">
                                 <div class="thumbnail">
-                                    <img loading="lazy" alt="${title}" src="${thumbnail.replace('default.webp', '300.webp')}" />
+                                    <img loading="lazy" alt="" src="${thumbnail.replace('default.webp', '300.webp')}" />
                                 </div>
                                 <h3>${title}</h3>
                             </a>
