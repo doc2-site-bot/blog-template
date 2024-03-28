@@ -57,8 +57,8 @@ web-header-nav .posts {
     padding: 16px;
     border-radius: var(--border-radius);
     margin: 4px 0 0;
-    width: calc(100vw - 32px);
-    max-width: var(--layout-width);
+    left: 0;
+    right: 0;
 }
 
 web-header-nav .posts:empty {
