@@ -1,0 +1,18 @@
+<template shadowrootmode="open">
+    <div part="wrapper">
+        <div part="text">
+            <slot></slot>
+            <slot name="form"></slot>
+        </div>
+        <div part="picture">
+            <slot name="picture"></slot>
+        </div>
+    </div>
+</template>
+
+<form slot="form" hidden>
+    <input type="email" name="email" placeholder="Email" required>
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAEhZ_W5F6wAHa1_" data-theme="light"></div>
+    <button type="submit" class="button">Submit</button>
+    <p class="success" hidden><strong>Thank you for subscribing !</strong></p>
+</form>

@@ -1,0 +1,104 @@
+web-post-list {
+    display: block;
+}
+
+web-post-list h2 {
+    padding: 0;
+}
+
+web-post-list .posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+web-post-list .post {
+    border-bottom: 1px solid var(--secondary-color);
+    padding-block: 32px;
+}
+
+web-post-list .post:first-child {
+    padding-top: 16px;
+}
+
+web-post-list .post:last-child {
+    border-bottom: none;
+    padding-bottom: 16px;
+}
+
+web-post-list .post a {
+    text-decoration: none;
+    display: flex;
+    gap: 16px;
+}
+
+web-post-list .post .thumbnail {
+    min-width: 256px;
+    height: 256px;
+    display: flex;
+}
+
+web-post-list .post img {
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--secondary-color);
+}
+
+web-post-list .post .published-at {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+web-post-list .post h3 {
+    padding: 0;
+}
+
+web-post-list .post .description {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+web-post-list .post .tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+web-post-list .post .tags li {
+    background-color: var(--secondary-color);
+    padding: 8px;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+web-post-list .posts.top .post {
+    padding: 16px 0;
+}
+
+web-post-list .posts.top .post .thumbnail {
+    min-width: 124px;
+    max-width: 124px;
+    height: 124px;
+}
+
+web-post-list .posts.top .post a {
+    align-items: center;
+}
+
+web-post-list .posts.top .post h3 {
+    margin: 0;
+}
+
+@media (width < 768px) {
+    web-post-list .posts:not(.top) .post a {
+        flex-direction: column-reverse;
+    }
+}

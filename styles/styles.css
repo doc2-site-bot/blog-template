@@ -1,0 +1,167 @@
+/* Global */
+:root {
+    --layout-width: 1280px;
+    --primary-color: #163819;
+    --secondary-color: #CCEDD2FF;
+    --animation-duration: 300ms;
+    --border-radius: 8px;
+    --font-family: system-ui, sans-serif;
+    --header-height: 48px;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+html {
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header:empty, footer:empty {
+    display: none;
+}
+
+var {
+    display: none;
+}
+
+/* Source: https://developer.chrome.com/en/articles/declarative-shadow-dom/ */
+*:not(:defined) > template[shadowrootmode] ~ * {
+    display: none;
+}
+
+/* Layout */
+header, footer {
+    height: var(--header-height);
+    padding: 0 16px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid var(--primary-color);
+    background: white;
+    z-index: 10;
+}
+
+main {
+    padding-top: var(--header-height);
+}
+
+footer {
+    border-top: 1px solid var(--secondary-color);
+}
+
+/* Default styles */
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+}
+
+p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+ul, ol {
+    margin-block: 16px;
+}
+
+h1 {
+    padding-block: 32px;
+    font-size: 42px;
+    line-height: 52px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+    padding-block: 24px;
+}
+
+h3 {
+    padding-block: 20px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    transition: all var(--animation-duration);
+    color: var(--primary-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    gap: 8px;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+}
+
+.social svg {
+    height: 24px;
+    width: 24px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all var(--animation-duration);
+    font-size: 14px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.button[disabled] {
+    opacity: .3;
+    pointer-events: none;
+}

@@ -1,0 +1,33 @@
+web-homepage {
+    display: block;
+}
+
+web-homepage::part(wrapper) {
+    max-width: var(--layout-width);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+web-homepage::part(main) {
+    min-width: calc(70% - 16px);
+}
+
+web-homepage::part(aside) {
+    min-width: calc(30% - 16px);
+}
+
+web-homepage [slot="aside"] {
+    position: sticky;
+    top: calc(var(--header-height) + 32px);
+}
+
+@media (width < 1024px) {
+    web-homepage::part(wrapper) {
+        flex-direction: column-reverse;
+    }
+}

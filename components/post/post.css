@@ -1,0 +1,83 @@
+web-post {
+    display: block;
+}
+
+web-post::part(headline) {
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+web-post::part(wrapper),
+web-post::part(content) {
+    margin: auto;
+    max-width: 768px;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+web-post picture[style*="--aspect-ratio"] {
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    padding-top: var(--aspect-ratio);
+    position: relative;
+    display: block;
+}
+
+web-post picture[style*="--aspect-ratio"] img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+web-post h1 {
+    padding-bottom: 16px;
+}
+
+web-post h1 + p {
+    font-size: 24px;
+    color: var(--primary-color);
+    line-height: 32px;
+}
+
+web-post h2 {
+    padding-block: 16px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+web-post p {
+    line-height: 28px;
+    font-weight: 300;
+}
+
+web-post [slot="meta"] {
+    border-top: 1px solid var(--secondary-color);
+    padding-block: 32px;
+    margin-top: 32px;
+}
+
+web-post .published-at {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+web-post .tags {
+    list-style: none;
+    margin-block: 16px;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+web-post .tags li {
+    background-color: var(--secondary-color);
+    padding: 8px;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+}

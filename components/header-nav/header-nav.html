@@ -1,0 +1,12 @@
+<template shadowrootmode="open">
+    <div part="wrapper">
+        <a href="/" part="home">Home</a>
+        <slot name="search"></slot>
+        <slot name="social"></slot>
+    </div>
+</template>
+
+<div slot="search">
+    <input type="search" placeholder="Search Posts">
+    <ul class="posts"></ul>
+</div>

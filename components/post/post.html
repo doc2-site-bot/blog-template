@@ -1,0 +1,19 @@
+<template shadowrootmode="open">
+    <article>
+        <div part="headline">
+            <div part="wrapper">
+                <slot name="title"></slot>
+                <slot name="description"></slot>
+            </div>
+        </div>
+        <div part="content">
+            <slot></slot>
+            <slot name="meta"></slot>
+        </div>
+    </article>
+</template>
+
+<div slot="meta">
+    <p class="published-at">Published <span></span></p>
+    <ul class="tags"></ul>
+</div>

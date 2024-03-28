@@ -1,0 +1,46 @@
+{
+  "subdomain": "blog-template",
+  "ssr": [
+    {
+      "select": {
+        "footer": {
+          "hidden": "true"
+        },
+        "web-homepage web-hero": {
+          "slot": "hero"
+        },
+        "web-homepage web-post-list.latest": {
+          "slot": "main"
+        },
+        "web-homepage web-post-list.top": {
+          "slot": "aside"
+        },
+        "web-hero p:has(picture)": {
+          "slot": "picture"
+        },
+        "web-hero a": {
+          "class": "button"
+        },
+        "web-post h1": {
+          "slot": "title"
+        },
+        "web-post h1 + p": {
+          "slot": "description"
+        }
+      },
+      "selectAll": {
+        "script[src*='footer-nav']": {
+          "tagName": "template"
+        },
+        "web-header-nav p:has(a)":  {
+          "class": "social",
+          "slot": "social"
+        },
+        "web-footer-nav p:has(a)":  {
+          "class": "social",
+          "slot": "social"
+        }
+      }
+    }
+  ]
+}

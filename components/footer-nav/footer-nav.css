@@ -1,0 +1,35 @@
+web-footer-nav {
+    display: block;
+    padding-block: 32px;
+}
+
+web-footer-nav::part(wrapper) {
+    display: flex;
+    max-width: var(--layout-width);
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+web-footer-nav::part(text) {
+    display: flex;
+    gap: 8px;
+}
+
+web-footer-nav p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+@media (width < 768px) {
+    web-footer-nav::part(wrapper), web-footer-nav::part(text) {
+        flex-direction: column-reverse;
+        gap: 16px;
+        text-align: center;
+    }
+}
+

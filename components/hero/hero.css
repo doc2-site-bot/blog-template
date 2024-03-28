@@ -1,0 +1,80 @@
+web-hero {
+    display: block;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+web-hero::part(wrapper) {
+    display: flex;
+    max-width: var(--layout-width);
+    margin: auto;
+}
+
+web-hero::part(text) {
+    padding: 16px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+web-hero::part(picture) {
+    min-width: 40vw;
+    max-width: 40vw;
+}
+
+web-hero p[slot="picture"] {
+    margin: 0;
+    height: 100%;
+}
+
+web-hero picture {
+    display: flex;
+    height: 100%;
+}
+
+web-hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background: var(--primary-color);
+}
+
+web-hero h1 {
+    padding: 0;
+}
+
+web-hero h1 + p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+web-hero .button {
+    margin-top: 32px;
+}
+
+web-hero input[type="email"] {
+    border: 1px solid var(--primary-color);
+    font-family: var(--font-family);
+    font-size: 14px;
+    padding: 8px;
+    border-radius: var(--border-radius);
+    color: var(--primary-color);
+    width: 300px;
+    margin-block: 16px;
+}
+
+@media (width < 1024px) {
+    web-hero::part(wrapper) {
+        flex-direction: column-reverse;
+    }
+
+    web-hero::part(picture) {
+        max-height: 40vh;
+        min-width: 100vw;
+        max-width: none;
+    }
+
+    web-hero p[slot="picture"] {
+        height: 40vh;
+    }
+}
