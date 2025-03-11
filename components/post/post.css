@@ -49,7 +49,6 @@ web-post h2 {
 
 web-post p {
     line-height: 28px;
-    font-weight: 300;
 }
 
 web-post [slot="meta"] {
