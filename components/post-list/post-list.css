@@ -38,12 +38,19 @@ web-post-list .post .thumbnail {
     min-width: 256px;
     height: 256px;
     display: flex;
+    overflow: hidden;
 }
 
 web-post-list .post img {
     height: 100%;
     object-fit: cover;
     background-color: var(--secondary-color);
+    transform: scale(1, 1);
+    transition: transform 10s ease;
+}
+
+web-post-list .post:hover img {
+    transform: scale(1.2, 1.2);
 }
 
 web-post-list .post .published-at {
@@ -87,6 +94,7 @@ web-post-list .posts.top .post .thumbnail {
     min-width: 124px;
     max-width: 124px;
     height: 124px;
+    overflow: hidden;
 }
 
 web-post-list .posts.top .post a {
@@ -101,4 +109,9 @@ web-post-list .posts.top .post h3 {
     web-post-list .posts:not(.top) .post a {
         flex-direction: column-reverse;
     }
+}
+
+web-post-list .post {
+    animation: ease-in-out reveal;
+    animation-timeline: view();
 }

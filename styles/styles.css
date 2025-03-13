@@ -19,6 +19,15 @@
     navigation: auto;
 }
 
+@keyframes reveal {
+    entry 0% {
+        opacity: 0;
+    }
+    entry 100% {
+        opacity: 1;
+    }
+}
+
 [hidden] {
     display: none !important;
 }

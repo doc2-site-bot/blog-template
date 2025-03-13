@@ -80,3 +80,8 @@ web-post .tags li {
     font-weight: 700;
     color: var(--primary-color);
 }
+
+web-post > * {
+    animation: ease-in-out reveal;
+    animation-timeline: view();
+}

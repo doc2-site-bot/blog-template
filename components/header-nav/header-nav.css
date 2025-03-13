@@ -19,6 +19,7 @@ web-header-nav::part(home) {
     padding: 8px;
     border: 1px solid var(--primary-color);
     border-radius: var(--border-radius);
+    transition: all var(--animation-duration);
 }
 
 web-header-nav::part(home):hover {
@@ -84,6 +85,10 @@ web-header-nav .post a {
     gap: 16px;
     text-decoration: none;
     align-items: center;
+}
+
+web-header-nav .post a:hover {
+    text-decoration: underline;
 }
 
 web-header-nav .post .thumbnail {

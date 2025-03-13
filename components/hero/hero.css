@@ -30,6 +30,20 @@ web-hero p[slot="picture"] {
 web-hero picture {
     display: flex;
     height: 100%;
+    overflow: hidden;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 web-hero img {
@@ -37,6 +51,7 @@ web-hero img {
     width: 100%;
     object-fit: cover;
     background: var(--primary-color);
+    animation: zoom 50s ease infinite;
 }
 
 web-hero h1 {
